@@ -187,7 +187,7 @@ INSERT INTO `survey_defaults` (`id`, `status`, `default_name`, `default_value`, 
 --
 
 INSERT INTO `survey_info` (`id`, `id_index`, `status`, `form_type`, `info_titles`, `page_name`, `survey_name`, `survey_title`, `overview`, `user_level`, `time_length`, `timer`, `results`, `purpose`, `author`, `release_date`, `closing`, `closing_link`, `user_name`, `info_image`, `image_comment`, `updated`) VALUES
-(1, NULL, 'active', 'Quiz', 'false', 'daylily-quiz', 'daylily-quiz', 'The Daylily Quiz', '35 General broad topic questions on daylilies, including growing, caring for, type indentification, and history\\.  All questions are multiple choice consisting of True-False, Word Definition, and Phrase Completion\\.', 'Difficult', ' 6 to 15 minutes to complete\\.', '12:30', 'active', 'For Entertainment and Education\\! So have fun\\!', 'This Quiz created and researched by Mark Bazzone at RoomIllusion\\.com for the Upstate Daylily Society\\.', 'April, 2013\\.', 'Thank you for taking our survey', NULL, 'optional', NULL, NULL, '2013-10-18 06:19:59');
+(1, NULL, 'active', 'Quiz', 'false', 'demo', 'daylily-quiz', 'The Daylily Quiz', '35 General broad topic questions on daylilies, including growing, caring for, type indentification, and history\\.  All questions are multiple choice consisting of True-False, Word Definition, and Phrase Completion\\.', 'Difficult', ' 6 to 15 minutes to complete\\.', '12:30', 'active', 'For Entertainment and Education\\! So have fun\\!', 'This Quiz created and researched by Mark Bazzone at RoomIllusion\\.com for the Upstate Daylily Society\\.', 'April, 2013\\.', 'Thank you for taking our survey', NULL, 'optional', NULL, NULL, '2013-10-18 06:19:59');
 
 -- --------------------------------------------------------
 --
