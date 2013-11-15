@@ -10,7 +10,7 @@
 	switch ($action) {
 		case "defaults_set":{	
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$host;$database;$username;$password;$mysqli;$pdo;			
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
@@ -26,7 +26,7 @@
 			flush(); break;} 	
 		case "defaults_get":{ 
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$host;$database;$username;$password;$mysqli;$pdo;	
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb);
@@ -59,7 +59,7 @@
 			flush(); break;} 
 		case "survey_list_get":{
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $typeOBJ = array(); $return = '';
@@ -79,7 +79,7 @@
 			flush(); break;} 
 		case "new_info":{
 			ob_start();	
-			require_once('/_config/class._connect.inc.php');
+			require_once('../php/_config/class._connect.inc.php');
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $return1 = ''; $return2 = ''; $namecheck1 = ''; $namecheck2 = '';
@@ -106,7 +106,7 @@
 			flush(); break;}
 		case "edit_info":{	
 			ob_start();
-			require_once('/_config/class._connect.inc.php');
+			require_once('../php/_config/class._connect.inc.php');
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $return1 = ''; $result = ''; $namecheck1 = ''; $namecheck2 = ''; $namecheck3 = ''; $namecheck4 = '';
@@ -131,7 +131,7 @@
 			flush();  ob_flush();  break;}
 		case "new_question":{
 			ob_start();
-			require_once('/_config/class._connect.inc.php');
+			require_once('../php/_config/class._connect.inc.php');
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $countCheck1 = ''; $countCheck2 = ''; $newNum =0;	$return1 = ''; $return2 = '';
@@ -164,7 +164,7 @@
 			flush(); break;} 
 		case "edit_question":{	
 			ob_start();
-			require_once('/_config/class._connect.inc.php');
+			require_once('../php/_config/class._connect.inc.php');
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $countCheck1 = ''; $countCheck2 = ''; $countCheck3 = ''; $countCheck4 = ''; $return = '';  $result = '';
@@ -193,7 +193,7 @@
 			flush(); break;}
 		case "get_test":{
 			ob_start();
-			require_once('/_config/class._connect.inc.php');
+			require_once('../php/_config/class._connect.inc.php');
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $return = '';
@@ -218,7 +218,7 @@
 			flush(); break;} 
 		case "reorder_questions":{
 			ob_start();
-			require_once('/_config/class._connect.inc.php');
+			require_once('../php/_config/class._connect.inc.php');
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $return = '';
@@ -240,7 +240,7 @@
 			flush(); break;}
 		case "publish_tracking":{
 			ob_start();
-			require_once('/_config/class._connect.inc.php');
+			require_once('../php/_config/class._connect.inc.php');
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $return = '';  $i = '';  
@@ -255,7 +255,7 @@
 			flush();  ob_flush(); break;}
 		case "publish_results":{	
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $return = ''; 	 
@@ -269,7 +269,7 @@
 			flush(); break;}
 		case "publish_tracer":{	
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				set_time_limit(25000);	
@@ -359,7 +359,7 @@
 			flush(); break;}
 		case "publish_tests":{
 			ob_start();
-			require_once('/_config/class._connect.inc.php');
+			require_once('../php/_config/class._connect.inc.php');
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				set_time_limit(25000);	

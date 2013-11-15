@@ -1,16 +1,16 @@
 <?php  /* This page is a PHP file for Surveyor Elite copyright 2013, Mark Bazzone.  SurveyorElite.com */
-	$date = new DateTime();
+	$date = new DateTime(); $temp= array(); 
 	if(isset($_GET['action'])){  $action=$_GET['action'];  }
 	if(isset($_GET['index'])){  $index=$_GET['index'];  }
 	if(isset($_GET['additional'])){  $additional=$_GET['additional'];  }
 	if(isset($_GET['submission'])){  $submission=$_GET['submission'];  }
 	if(isset($_GET['results'])){  $results=$_GET['results'];  }
 	if(isset($_GET['UiD'])){  $userId=$_GET['UiD'];  } 
-	$html=''; $temp= array(); 
+	$html='';   
 	switch ($action) {
 		case "page_check":{	 
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 			$buildOBJ = array();		
@@ -49,7 +49,7 @@
 			flush(); break;} 
 		case "test_get":{ 
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $buildOBJ['test_get']='';				
@@ -82,7 +82,7 @@
 			flush(); break;} 
 		case "page_turn":{
 			ob_start(); 
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $buildOBJ['page_turn']=''; 	
@@ -119,7 +119,7 @@
 			flush(); break;} 
 		case "test_results":{ 
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array(); $buildOBJ['page_turn']='';	
@@ -131,7 +131,7 @@
 			flush(); break;} 
 		case "user_name":{ 
 			ob_start();
-			require_once('/_config/class._connect.inc.php'); 
+			require_once('../php/_config/class._connect.inc.php'); 
 			$MyDb = new _ExFotR();
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				$buildOBJ = array();	
