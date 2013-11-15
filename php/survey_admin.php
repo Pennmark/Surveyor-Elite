@@ -274,7 +274,7 @@
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				set_time_limit(25000);	
 				if( !ini_get('safe_mode') ){ set_time_limit(25000); } 
-				require_once('/_classes/class.publisher.inc.php');
+				require_once('../php/_classes/class.publisher.inc.php');
 				$buildOBJ = array();	$buildOBJ["multiCheck"]=''; $htmlArray=array(); $return = ''; $tempNum=0; $i=0; 
 				$publisher = new publisher(); $formbuilder = new formbuilder(); $parseIt = new parseIt(); 				
 				$publisher->directoryCreator();				 
@@ -364,7 +364,7 @@
 			$MyDb = $MyDb->_SplRs1($action,$MyDb); $mysqli= $MyDb->_SplRs2($action,$MyDb); $pdo = $MyDb->_SplRs3($action,$MyDb);
 				set_time_limit(25000);	
 				if( !ini_get('safe_mode') ){ set_time_limit(25000); } 
-				require_once('/_classes/class.publisher.inc.php');
+				require_once('../php/_classes/class.publisher.inc.php');
 				$buildOBJ = array();	$buildOBJ['export']=array(); $buildOBJ["multiCheck"]=''; $htmlArray=array(); $return = ''; $tempNum=0; $i=0; 
 				$publisher = new publisher(); $formbuilder = new formbuilder(); $parseIt = new parseIt(); 
 				$tempName = "_schema";
@@ -436,7 +436,7 @@
 			flush(); break;} 
 		case "file_download":{	
 			ob_start();
-			require_once('/_classes/class.zipper.inc.php');
+			require_once('../php/_classes/class.zipper.inc.php');
 				$buildOBJ = array(); $return = ''; 
 			$downLDR = new downLDR(); $buildOBJ["tempCheck1"] = strpos($additional, 'tracking_download'); $buildOBJ["tempCheck2"] = strpos($additional, 'results_download'); 
 			if( $index=="file_download" && $additional=="results_zip"){ if(is_dir('../_library/published/results/')){ $buildOBJ['route_set']="results"; $return = $downLDR->results_zip($buildOBJ['route_set'], $return, $date);  $return = "Zip_success"; }else{ $return = "no_folder";} }
