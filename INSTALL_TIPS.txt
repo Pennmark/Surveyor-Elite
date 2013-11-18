@@ -8,4 +8,7 @@ Drupal 7:
 
 Because of Drupal CMS, you must install in one of Durpal's designated areas.
 
-Install in "sites/all/modules". Use the "drupal_add_js()" to add the scripts to the head.  I used page detection in the page.tpl.php to create the insert div in the content are when the correct node is detected, but this can be achieved any number of ways.  You need not connect this like other Durpal Modules. Surveyor Elite will execute itselt and does not require Drupal's assistance.
+Install in "/misc" folder. Use the "drupal_add_js()" to add the scripts to the head. Include JQuery library if not already included.
+
+Add the "survey_content" div to the template in which you wish it to appear (content, sidebar, footer, etc...).  If no survey, a 1em high icon will appear, and nothing else.  This is just a marker to let site know the div is present and working.  If a survey has been created, it will appear here.
+  
