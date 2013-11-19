@@ -30,7 +30,7 @@ A.  Inside the master folder are instructions, myslq table code, readme, and a "
 			_config (sub/sub)
 			-download (sub/sub)
 		js (sub)
-		_library (sub/sub)
+		_library (sub)
 	
 	*If your zip unpacks: /Suveror-Elite/Surveyor-Elite/(sub)/(sub-sub), you will need to remove the inner Sureyor-Elite so you structure is:
 	
