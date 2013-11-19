@@ -22,7 +22,21 @@ II. INSTALLATION.
 
 --------------------------------------------------------------------------------------------
 
-A.  EDIT /Surveyor-Elite/js/surveyor-elite_v1.0.0.js AND /Surveyor-Elite/js/surveyor-elite-cms_v1.0.0.js TO WORK ON YOUR PLATFORM.
+A.  Inside the master folder are instructions, myslq table code, readme, and a "Surveyor-Elite" folder.  This "Surveyor-elite" folder is the one to use with your site.  Remove this folder and place it in the folder on your site you want it. The folder structure is as follows:
+	
+	*Surveyor-Elite (master folder)
+		php (sub)
+			_classes (sub/sub)
+			_config (sub/sub)
+			-download (sub/sub)
+		js (sub)
+		_library (sub/sub)
+	
+	*If your zip unpacks: /Suveror-Elite/Surveyor-Elite/(sub)/(sub-sub), you will need to remove the inner Sureyor-Elite so you structure is:
+	
+		www.mysite.com/someFolderPath/maybeSecondPath/Surveyor-Elite/(sub)/(sub-sub)
+
+B. EDIT /Surveyor-Elite/js/surveyor-elite_v1.0.0.js AND /Surveyor-Elite/js/surveyor-elite-cms_v1.0.0.js TO WORK ON YOUR PLATFORM.
 		
 1. This is very easy!  Surveyor Elite can be placed in any folder, however, it will only be able to locate itself if you set this OBJECT to your local location.
 			
@@ -50,7 +64,7 @@ A.  EDIT /Surveyor-Elite/js/surveyor-elite_v1.0.0.js AND /Surveyor-Elite/js/surv
 
 -------------------------------------------------------------------------------------------
 
-B.  CREATE OR EDIT A DATABASE  TO PLACE THE /Surveyor-Elite/MysqlTables.txt.
+C.  CREATE OR EDIT A DATABASE  TO PLACE THE /Surveyor-Elite/MysqlTables.txt.
 		
 1. Open /Surveyor-Elite/MysqlTables.txt.  This includes all tables needed for Surveyor Elite in Unicode & INNODB.  You can add to current database or create a new one if you want a separation. Tables include:
 				
@@ -64,7 +78,7 @@ B.  CREATE OR EDIT A DATABASE  TO PLACE THE /Surveyor-Elite/MysqlTables.txt.
 
 --------------------------------------------------------------------------------------------
 
-C.  EDIT  /Surveyor-Elite/php/_config/class._connect.inc.php TO WORK WITH YOUR DATABASE.
+D.  EDIT  /Surveyor-Elite/php/_config/class._connect.inc.php TO WORK WITH YOUR DATABASE.
 			
 1. Assign the Object connecting the database.  Lines 5 to 8 of this file, in the "_SplRs1" function, has the following:
 			
@@ -78,7 +92,7 @@ C.  EDIT  /Surveyor-Elite/php/_config/class._connect.inc.php TO WORK WITH YOUR D
 
 --------------------------------------------------------------------------------------------
 
-D.  INSERT DISPLAY ELEMENT INTO DISPLAY PAGE
+E.  INSERT DISPLAY ELEMENT INTO DISPLAY PAGE
 		
 1. If this is your first time Installing and your are using the demo test, create a new page called "demo".  Surveyor Elite can be installed on any page at any location (Min width 20em). If you want to test the demo on an existing page, you will need to change the page name in the CMS or DB for the Daylily Quiz to the page on which you wish it to display.
 			
@@ -114,7 +128,7 @@ This only turns off CMS access to database, and in no other way affects the appl
 
 --------------------------------------------------------------------------------------------
 
-E.  INSERT SCRIPT LINK INTO PAGE HEADER
+F.  INSERT SCRIPT LINK INTO PAGE HEADER
 			
 1. In Addition to the Jquery script link, you will need to place a link for surveyor-elite_v1.0.0.js AND surveyor-elite-cms_v1.0.0.js in the <HEAD>.  make sure the path here between the domain and the Surveyor-Elite folder matches the object information you put in INSTALLATION: SECTION A.
 
