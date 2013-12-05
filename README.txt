@@ -102,7 +102,7 @@ E.  INSERT DISPLAY ELEMENT INTO DISPLAY PAGE
 			
 4. For the Client Side Display: Within the page <BODY> of the front-end page, place the following div element in the page as shown:
 				
-	<div id="survey-content"></div>  OR  <div id='survey-content'></div>
+	<div id="survey-content"></div>  OR  <div id='survey_admin-content'></div>
 
 5. When creating an ADMIN page to place the CMS panel, you must have the word "admin" in the page URL name.  These are all the variations, so you are not limited, and it can be anywhere in the page name (IE my_admin-page, Adminpage, cms-admin)
 
