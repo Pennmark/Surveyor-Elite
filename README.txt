@@ -11,7 +11,7 @@ I. FOLDER
 When you download Surveyor Elite, and unzip, you will find inside the Surveyor-Elite folder, some text files (README, MySQL code) and another Surveyor-Elite folder.  This inner folder is the one you will install on your website.  Either copy or remove this folder and place it within the folder structure of your website at your desired location.	
 Folder Structure is as follows:
 
-REFER TO IMAGE FOLDER:  /manual/folders.png in download folder.
+REFER TO IMAGE FOLDER: /README-images/folders.png in download folder.
 
 The above image represents useage.  Red should not me moved to your domain.  Green will not appear until you plibhs your first tracking reports.  Blue will be moved to your domain for use.
 
@@ -23,7 +23,7 @@ II. JQUERY
 Edit /Surveyor-Elite/js/surveyor-elite_v1.0.0.js & /Surveyor-Elite/js/surveyor-elite-cms_v1.0.0.js to work on your platform.
 This is very easy!  Surveyor Elite can be placed in any folder, however, it will only be able to locate itself if you set this to your local location:
 
-REFER TO IMAGE FOLDER:  /manual/appPath.jpg in download folder.
+REFER TO IMAGE FOLDER: /README-images/appPath.jpg in download folder.
 
 At line 5 you will see:
 
@@ -44,25 +44,25 @@ First you need a database.  It can be a current in-use, or a new empty one.  You
 
 Open /Surveyor-Elite/MysqlTables.txt.  This includes all tables needed for Surveyor Elite in Unicode & INNODB.  You can add to current database or create a new one if you want a separation. Tables include:
 
-REFER TO IMAGE FOLDER:  /manual/table.jpg in download folder.
+REFER TO IMAGE FOLDER: /README-images/table.jpg in download folder.
 
 The code includes all information for the survey_defaults table to set up.  This is essential to operations. Either copy-and-paste into a SQL panel or import.
 The code includes the Demo "The Daylily Quiz".  This is done to expedite setup and installation by allowing a user to test survey taking, timers, results, tracking, and tests without having to create a new survey for testing.  If you have installed Surveyor Elite in the past, you can remove this "INSERT" code for the `survey` and `survey_info` page.  Once you have tested after installation, you can "purge" the `survey` and `survey_info` tables.  The display page name for this is set to "demo".
 If you don't use the Demo, you will get messages like "you haven't created any surveys yet" on the front end display page.
 The defaults table has a setting if a site does not have a secure admin / login area.  When downloaded, the defaults table is set  to "ON" like this:
 
-REFER TO IMAGE FOLDER:  /manual/admin-on.jpg in download folder.
+REFER TO IMAGE FOLDER: /README-images/admin-on.jpg in download folder.
 
 These switches were created so Administrators could shut off CMS/admin access for either maintenance or if no secure admin exists. To manually shut off admin:
 
-REFER TO IMAGE FOLDER:  /manual/admin-off.jpg in download folder.
+REFER TO IMAGE FOLDER: /README-images/admin-off.jpg in download folder.
 						
 This only turns off CMS access to database, and in no other way affects the application.  Reset to "ON" to restart access.
 IV. PHP
 Edit  /Surveyor-Elite/php/_config/class._connect.inc.php to work with your Database.
 Assign the Object connecting the database.  Lines 5 to 8 of this file, in the "_SplRs1" function, has the following:
 
-REFER TO IMAGE FOLDER:  /manual/setConnect.jpg in download folder.
+REFER TO IMAGE FOLDER: /README-images/setConnect.jpg in download folder.
 
 Notice it is not only within an object, but you see a series of array checks.  This prevents your database information from being used unless stating one of these Array names, and this is sent from another object which pre-screened these names and sent them.  Also, after each "call" from Surveyor Elite, this object is cleared, so this password information can only be used ONCE each call from a client for the defined use, preventing open connection access and unauthorized database access through Surveyor Elite.	
 
