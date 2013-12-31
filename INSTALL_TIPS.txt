@@ -1,5 +1,12 @@
 PLATFORM INSTALLATION HINTS:
 
+To replace "surveyor Elite" logo with your own logo:
+ 
+1. go into the folder "Surveyor-Elite/_library/" and you will find a .png image called "surveyorelite.png".
+
+2.Replace this image with your own company logo.  Must be png.  Must have the same name.  Your image will show up on the survey/test pages.  The link accociated with the "logo" reads and links to the domain in it on, so you need to do nothing to make the link to this image your own.
+
+
 CodeIngniter 2 & bare Platform Structures:
 
 I installed in an "assets" folder outside the system and application folder. This was for security so Surveyor Elite files were far from any system files.  Place inset div in the "view" you wish, using the "model" to place the scripts in the head on the correct pages.  You can also have the script link in the head at all times loading with all pages, as long as the activation "div" is only on desired pages.
