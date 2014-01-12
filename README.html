@@ -39,7 +39,7 @@
 <p>When you download Surveyor Elite, and unzip, you will find inside the Surveyor-Elite folder, some text files (README, MySQL code) and another Surveyor-Elite folder.  This inner folder is the one you will install on your website.  Either copy or remove this folder and place it within the folder structure of your website at your desired location.</p>	
 <blockquote>Folder Structure is as follows:</blockquote>
 <div class="manual_pic" ><a name="unzipping"></a>
-<img name='folderPic1' src="http://www.surveyorelite.com/assets/img/feature//manual/folders.png" alt="Surveyor Elite Folder Structure"/><br/>
+<img name='folderPic1' src="http://www.surveyorelite.com/assets/img/feature/manual/folders.png" alt="Surveyor Elite Folder Structure"/><br/>
 <label for='folderPic1' ><b class='redMe'>Red</b>&rarr;Remove After Download &nbsp;&diams;&nbsp; <b class='blueMe'>Blue</b>&rarr;Move to Website. &nbsp;&diams;&nbsp; <b class='greenMe'>Green</b>&rarr;created by Surveyor Elite with CMS.</label>
 </div>	
 <p>The above image represents useage.  Red should not me moved to your domain.  Green will not appear until you plibhs your first tracking reports.  Blue will be moved to your domain for use.</p>
@@ -51,7 +51,7 @@
 <p>Edit <span class="blueMe">/Surveyor-Elite/js/surveyor-elite_v1.0.0.js</span> & <span class="blueMe">/Surveyor-Elite/js/surveyor-elite-cms_v1.0.0.js</span> to work on your platform.</p>
 <p>This is very easy!  Surveyor Elite can be placed in any folder, however, it will only be able to locate itself if you set this to your local location:</p>
 <div class="manual_pic_small" ><a name="editjsfile"></a>
-<img name='folderPic2' src="http://www.surveyorelite.com/assets/img/feature//manual/appPath.jpg" alt="Surveyor Elite Folder Structure"/><br/>
+<img name='folderPic2' src="http://www.surveyorelite.com/assets/img/feature/manual/appPath.jpg" alt="Surveyor Elite Folder Structure"/><br/>
 <label for='folderPic2' ><b class='redMe'>Red</b>&rarr;Replace with Root Path &nbsp;&diams;&nbsp; <b style='color:black'>Black</b>&rarr;JS Code- Do Not Touch. &nbsp;&diams;&nbsp; <b class='greenMe'>Green</b>&rarr;Commented Out Information.</label>
 </div>	
 <p>At line 5 you will see:</p>
@@ -67,25 +67,25 @@
 <p><a name="mysqlcode"></a>First you need a database.  It can be a current in-use, or a new empty one.  You will need to then enter the SQL code included in the MysqlTable.txt document in the downloaded folder.</p>
 <p>Open /Surveyor-Elite/MysqlTables.txt.  This includes all tables needed for Surveyor Elite in Unicode & INNODB.  You can add to current database or create a new one if you want a separation. Tables include:</p>
 <div class="manual_pic_mini" >
-<img name='folderPic4' src="http://www.surveyorelite.com/assets/img/feature//manual/table.jpg" alt="Database Tables"/><br/>
+<img name='folderPic4' src="http://www.surveyorelite.com/assets/img/feature/manual/table.jpg" alt="Database Tables"/><br/>
 </div>	
 <p><a name="defaults"></a>The code includes all information for the survey_defaults table to set up.  This is essential to operations. Either copy-and-paste into a SQL panel or import.</p>
 <p>The code includes the Demo "The Daylily Quiz".  This is done to expedite setup and installation by allowing a user to test survey taking, timers, results, tracking, and tests without having to create a new survey for testing.  If you have installed Surveyor Elite in the past, you can remove this "INSERT" code for the `survey` and `survey_info` page.  Once you have tested after installation, you can "purge" the `survey` and `survey_info` tables.  The display page name for this is set to "demo".</p>
 <p>If you don't use the Demo, you will get messages like "you haven't created any surveys yet" on the front end display page.</p>
 <p><a name="cmsonoff"></a>The defaults table has a setting if a site does not have a secure admin / login area.  When downloaded, the defaults table is set  to "ON" like this:</p>
 <div class="manual_pic_small" >
-<img name='folderPic4' src="http://www.surveyorelite.com/assets/img/feature//manual/admin-on.jpg" alt="Database Turn On"/><br/>
+<img name='folderPic4' src="http://www.surveyorelite.com/assets/img/feature/manual/admin-on.jpg" alt="Database Turn On"/><br/>
 </div>	
 <p>These switches were created so Administrators could shut off CMS/admin access for either maintenance or if no secure admin exists. To manually shut off admin:</p>
 <div class="manual_pic_small" >
-<img name='folderPic4' src="http://www.surveyorelite.com/assets/img/feature//manual/admin-off.jpg" alt="Database Turn Off"/><br/>
+<img name='folderPic4' src="http://www.surveyorelite.com/assets/img/feature/manual/admin-off.jpg" alt="Database Turn Off"/><br/>
 </div>							
 <p>This only turns off CMS access to database, and in no other way affects the application.  Reset to "ON" to restart access.</p>
 <h3>IV.&nbsp; <a name="phpclasses">PHP</a></h3>
 <p>Edit  /Surveyor-Elite/php/_config/class._connect.inc.php to work with your Database.</p>
 <p>Assign the Object connecting the database.  Lines 5 to 8 of this file, in the "_SplRs1" function, has the following:</p>
 <div class="manual_pic_small" ><a name="connectclass"></a>
-<img name='folderPic3' src="/../assets/img/feature//manual/setConnect.jpg" alt="Database set connection"/><br/>
+<img name='folderPic3' src="http://www.surveyorelite.com/assets/img/feature/manual/setConnect.jpg" alt="Database set connection"/><br/>
 <label for='folderPic3' ><b class='redMe'>Red</b>&rarr;Replace with Root Path &nbsp;&diams;&nbsp; <b style='color:black'>Black</b>&rarr;JS Code- Do Not Touch. &nbsp;&diams;&nbsp; <b class='greenMe'>Green</b>&rarr;Commented Out Information.</label>
 </div>	
 <p>Notice it is not only within an object, but you see a series of array checks.  This prevents your database information from being used unless stating one of these Array names, and this is sent from another object which pre-screened these names and sent them.  Also, after each "call" from Surveyor Elite, this object is cleared, so this password information can only be used ONCE each call from a client for the defined use, preventing open connection access and unauthorized database access through Surveyor Elite.</p>	
