@@ -21,6 +21,7 @@
 #survey-image{max-width:20em;}
 #comment-img{max-width:20em;overflow:hidden;float:right;}
 #wrap-pop{height:100%;text-align:center;width:80%;min-width:20em;max-width:120em;overflow:auto;margin:5% auto auto auto;}
+#comment-img span{display:block;clear:both;text-align:center;overflow:hidden;padding:1% 1% 1% 5%;}
 
 .info_box{border:0.1em solid rgb(180,210,235);margin:0em;padding:0.5em;box-shadow: 2px 2px 3px rgb(190,190,155);overflow:hidden;overflow:hidden;text-align:left;}
 .survey_logo{height:2em;float:right;}.open_closed{height:0.6em;margin:0.1em;float:left;}
